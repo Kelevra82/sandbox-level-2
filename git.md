@@ -19,12 +19,14 @@
 1. git init
 2. Run the command `git config user.name`
 3. If it's not correct, run the command `git config user.name "Your Name"`
+4. To set it as default, run the command `git config --global user.name "Your Name"`
 
 ### CONFIGURE USER EMAIL
 
 1. git init
 2. Run the command `git config user.email`
 3. If it's not correct, run the command `git config user.email "Your Email"`
+4. To set it as default, run the command `git config --global user.email "Your Email"`
 
 ### COPY THE REPOSITORY URL
 
@@ -55,12 +57,11 @@ git pull origin main
 
 ### PUSH TO GITHUB FOR THE FIRST TIME
 
-Run these first 2 commands first if not pulling from github:
+Run these first 2 commands first if not pulling from GitHub:
 
-```
-git init
-git remote add origin https://github.com/YourName/YourRepo.git
-```
+- `git init`
+- `git remote add origin https://github.com/YourName/YourRepo.git`
+
 
 ```
 gh auth login
@@ -88,10 +89,33 @@ git push
 
 ### DELETE SOURCE CONTROL
 
-```
-ls -a
-rm -r .git
-```
+`ls -a` - list all folders and files in a directory including hidden files  
+`rm -rf .git` - force delete the .git folder  
+`rf` - recursive force
+
+### VIEW BRANCHES
+
+`git branch` - list all branches
+
+### CREATE A BRANCH
+
+`git branch branchName` - create a new branch
+
+### SWITCH TO A BRANCH
+
+`git switch branchName` - switch to a branch
+
+### SWITCH TO A BRANCH ON GLITCH
+
+`git checkout branchName` - switch to a branch on Glitch
+
+### MERGE CHANGES TO A BRANCH
+
+1. Switch to the branch that will absorb the changes.  
+example - `git switch main`
+
+1. Merge the changes from other branch.  
+example - `git merge branchName`
 
 ### COMMAND DESCRIPTIONS
 
