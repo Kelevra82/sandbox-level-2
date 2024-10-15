@@ -16,14 +16,14 @@
 
 ### CONFIGURE USER NAME
 
-1. git init
+1. `git init`
 2. Run the command `git config user.name`
 3. If it's not correct, run the command `git config user.name "Your Name"`
 4. To set it as default, run the command `git config --global user.name "Your Name"`
 
 ### CONFIGURE USER EMAIL
 
-1. git init
+1. `git init`
 2. Run the command `git config user.email`
 3. If it's not correct, run the command `git config user.email "Your Email"`
 4. To set it as default, run the command `git config --global user.email "Your Email"`
@@ -129,3 +129,23 @@ example - `git merge branchName`
    - Sets the origin
 5. `git push --set-upstream origin main`
    - Pushes files to GitHub and makes origin and main the default options
+
+---
+
+### MERGE TEST
+
+1. `git init`
+2. `git config user.name "Your Name"`
+3. `git config user.email "Your Email"`
+4. `touch index.html`
+5. `git add .`
+6. `git commit -m "added index.html"`
+7. Create a GitHub repository called merge-test
+8. `git remote add origin https://github.com/YourName/merge-test.git`
+9. `git push --set-upstream origin main`
+10. `git branch myBranch`
+11. `git switch myBranch`
+12. Add `<p>Hello World</p>` to index.html
+13. Save the changes CTRL + S
+14. `git add .`
+15. `git commit -m "updated file"`
