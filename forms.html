@@ -1,0 +1,98 @@
+<head>
+  <title>Form Inputs</title>
+  <script src="utility-functions.js"></script>
+</head>
+<body>
+  <h1>Form Inputs</h1>
+  <form>
+    <input type="submit" />
+    ###-###-####
+  </form>
+  <div id="outputTag"></div>
+
+  <h3>Buttons</h3>
+  <pre>
+    <button onclick="output(' World!')" type="button">Click here</button>
+    <input type="button" value="Click button">
+    <input type="submit" value="Add submission">
+    <input type="reset" value="Reset form">
+    <input type="image" src="images\submit-button.png">
+    <input type="radio">Radio button
+    <input type="checkbox">Checkbox
+  </pre>
+  
+  <h3>Text Inputs</h3>
+  <pre>
+    <input type="text" placeholder="Enter text">
+    <input type="email" placeholder="Enter email">
+    <input type="tel" placeholder="Enter phone number">
+    <input type="number" placeholder="Enter number">
+    <input type="password" placeholder="Enter password">
+    <input type="search" placeholder="Enter search">
+    <input type="url" placeholder="Enter URL">
+  </pre>
+
+  <h3>Interface</h3>
+  <pre>
+    <input type="file">
+    <input type="color"> Color picker
+    <input type="time">
+    <input type="week">
+    <input type="month">
+    <input type="date">
+    <input type="datetime-local">
+    <input type="number" min="10" max="30"> Number range
+    <input type="range" min="10" max="30"> Number slider
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+      <option selected>Dropdown</option>
+    </select>
+  </pre>
+  
+  <hr>
+
+  <h2>Forms</h2>
+  <h3>Validation</h3>
+  <pre>
+    Forms can validate their input.
+    Inputs are checked before being submitted.
+    Type invalid values to see form validation.
+  </pre>
+
+  <form>
+    <input type="email" placeholder="Enter email">
+    <input type="submit">
+  </form>
+
+  <form>
+    <input required type="password" placeholder="Enter password">
+    <button type="submit">Submit</button>
+  </form>
+
+  <form>
+    <input type="text" placeholder="Input length" minlength="5" maxlength="10">
+    <input type="submit">
+  </form>
+  
+  <form>
+    <input type="tel" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <input type="submit">
+  </form>
+
+  <script>
+    const car = {};
+    car.color = "blue";
+    car.year = 2022;
+    debugger;
+
+    const groceries = ["tomatoes", "onions", "carrots"];
+
+    output('Position 0 isroceries[0]);
+    output(groceries[2]);
+
+    // output('The color is ${car.color}.<br>');
+    // output('The year is ${car.year}.<br>');
+  </script>
+</body>

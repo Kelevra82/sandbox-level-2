@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Map</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+  </head>
+
+  <body class="container">
+    <header></header>
+    <main>
+      <h1>Image Map</h1>
+      <p>
+        Image maps create clickable regions in a picture.<br />
+        Hover the mouse over some shapes.
+      </p>
+      <img
+        width="25%"
+        usemap="#my-image-map"
+        src="images\2d-shapes.jpg"
+        alt="shapes"
+      />
+      <map name="my-image-map">
+        <area
+          title="Click the rectangle"
+          coords="198, 72, 365, 168"
+          shape="rect"
+          href="https://en.wikipedia.org/wiki/Rectangle"
+          target="_blank"
+        />
+        <area
+          title="Click the circle"
+          coords="605, 115, 54"
+          shape="circle"
+          href="#circles"
+        />
+        <area
+          title="Click the heart"
+          coords="608, 525, 635, 510, 655, 525, 655, 555, 610, 600, 560, 550, 560, 520, 580, 510"
+          shape="poly"
+          href="https://en.wikipedia.org/wiki/Hearts_in_Unicode"
+          target="_blank"
+        />
+      </map>
+      <p>
+        <ol>
+
+          <li>use <code>map</code> and <code>area</code> to define an image map
+            <ul>
+              <li><code>map</code> needs the <code>name</code> attribute</li>
+              <li><code>img</code> needs the <code>usemap</code> attribute</li>
+              <li><code>usemap</code> should start with <code>#</code> and match the <code>name</code> of the map</li>
+            </ul>        
+          </li>
+          
+          <li><code>area</code> needs the <code>shape</code> attribute
+            <ul>
+              <li><code>shape</code> can be <code>rect</code>, <code>circle</code>, or <code>poly</code></li>
+              <li><code>area</code> needs the <code>coords</code> attribute</li>
+              <li><code>coords</code> can be obtained with Luna Paint or Pix Spy</li>
+            </ul>
+          </li>
+
+          <li>add <code>href</code> to <code>area</code> attribute to make it clickable</li>
+          <li>add <code>title</code> to <code>area</code> attribute for tooltip popups</li>
+          <li>add <code>target="_blank"</code> to <code>area</code> so links open in a new tab</li>
+          
+          <li>add link to image map resizer JSDelivr CDN
+            <ul>
+              <li>call <code>imageMapResize()</code> to automatically resize image maps</li>
+            </ul>
+          </li>
+          
+        </ol>
+      </p>
+      <h2 id="circles">All about circles</h2>
+      <script>
+        imageMapResize();
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>
