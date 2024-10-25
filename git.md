@@ -1,3 +1,5 @@
+TOC
+
 # GIT COMMANDS
 
 ## INSTALL GIT BASH
@@ -123,25 +125,39 @@ git push
 
 ## MERGE TEST
 
+#### INITIALIZE SOURCE CONTROL
+
 1. `git init`
 2. `git config user.name "Your Name"`
 3. `git config user.email "Your Email"`
 4. `touch index.html` - create a file called index.html
 5. `git add .` - stages all changes in the current directory and subdirectories, preparing them to be committed. The dot (.) represents the current directory.
 6. `git commit -m "added index.html"` - commit the changes
+
+>PUSH TO A NEW REPOSITORY ON GITHUB
+
 7. Create a GitHub repository called merge-test and copy the repository URL
 8. `git remote add origin https://github.com/YourName/merge-test.git` - add the repository
 9. `git push --set-upstream origin main` - Pushes your local changes to the remote repository (origin) and sets the upstream tracking information for the current branch (main)
-10. `git branch myBranch` - create a new branch named myBranch
+
+>CREATE A BRANCH
+
+10.  `git branch myBranch` - create a new branch named myBranch
 11. `git switch myBranch` - switch to myBranch
 12. Add `<p>Hello World</p>` to index.html
 13. Save the changes CTRL + S
 14. `git add .` - add the changes
 15. `git commit -m "updated file"` - commit the changes
+
+>MERGE A BRANCH
+
 16. `git switch main` - switch to main branch
 17. Change the history on source control from `Auto` to `All`
 18. `git merge myBranch` - merge myBranch to main branch
 19. `git push` - push to GitHub
+
+>SETUP FOR REBASE
+
 20. `git switch myBranch` - switch to myBranch
 21. Add `<p>Amazing World!</p>` to index.html
 22. Save the changes CTRL + S
@@ -152,61 +168,65 @@ git push
 27. `git add .` - add the changes
 28. `git commit -m "added about.html"` - commit the changes
 29. `git merge myBranch` - merge myBranch to main
-30. `git rebase myBranch` - rebase myBranch to main
-31. `git push` - push to GitHub
-32. `git switch myBranch` - switch to myBranch
-33. `git rebase main` - rebase main to myBranch
+30. Approve the merge by closing the merge editor or the VIM editor (type :qa and hit enter)
 
-## FIX A MERGE CONFLICT
+>REBASE THE COMMITS
 
-34. Add `<h1>About Page</h1>` to about.html
-35. Save the changes CTRL + S
-36. `git add .` - add the changes
-37. `git commit -m "added heading"` - commit the changes
-38. `git switch main` - switch to main
-39. Add `<h2>About Page</h2>` to about.html
-40. Save the changes CTRL + S
-41. `git add .` - add the changes
-42. `git commit -m "added heading"` - commit the changes
-43. `git merge myBranch` - merge myBranch to main
-44. Select a resolution.
-45. Save the changes CTRL + S
-46. `git add .` - add the changes
-47. `git commit -m "merged changes"` - commit the changes
-48. `git push` - push to GitHub
+31. `git rebase myBranch` - rebase myBranch to main
+32. `git push` - push to GitHub
+33. `git switch myBranch` - switch to myBranch
+34. `git rebase main` - rebase main to myBranch
 
-## FIX A REBASE CONFLICT
+>RESOLVE A MERGE CONFLICT
 
-49. `git rebase myBranch` - rebase myBranch to main
-50. Select a resolution.
-51. Save the changes CTRL + S
-52. `git add .` - add the changes
-53. `git rebase --continue` - rebase myBranch to main
-54. `git push` - will cause an error. push to GitHub
-55. `git push --force` - force push to GitHub
+35. Add `<h1>About Page</h1>` to about.html
+36. Save the changes CTRL + S
+37. `git add .` - add the changes
+38. `git commit -m "added heading"` - commit the changes
+39. `git switch main` - switch to main
+40. Add `<h2>About Page</h2>` to about.html
+41. Save the changes CTRL + S
+42. `git add .` - add the changes
+43. `git commit -m "added heading"` - commit the changes
+44. `git merge myBranch` - merge myBranch to main
+45. Select a resolution.
+46. Save the changes CTRL + S
+47. `git add .` - add the changes
+48. `git commit -m "merged changes"` - commit the changes
+49. `git push` - push to GitHub
 
-## RESTORE A SAVE POINT
+>FIX A REBASE CONFLICT
 
-56. Select a commit to restore.
-57. Copy it's id
-58. `git reset --hard <commit id>` - input id w/o <> to restore a save point.
-59. `git push` - will cause an error. push to GitHub
-60. `git push --force` - force push to GitHub
+50. `git rebase myBranch` - rebase myBranch to main
+51. Select a resolution.
+52. Save the changes CTRL + S
+53. `git add .` - add the changes
+54. `git rebase --continue` - rebase myBranch to main
+55. `git push` - will cause an error. push to GitHub
+56. `git push --force` - force push to GitHub
 
-## PUSH A BRANCH TO GITHUB
+>RESTORE A SAVE POINT
 
-61. `git push origin myBranch` - push myBranch to GitHub
+57. Select a commit to restore.
+58. Copy it's id
+59. `git reset --hard <commit id>` - input id w/o <> to restore a save point.
+60. `git push` - will cause an error. push to GitHub
+61. `git push --force` - force push to GitHub
 
-## DELETE A BRANCH
+>PUSH A BRANCH TO GITHUB
 
-62. `git branch --delete myBranch` - will result in error
-63. `git branch -D myBranch` - delete myBranch
-64. `git branch` - list branches
+62. `git push origin myBranch` - push myBranch to GitHub
 
-## RESTORE A BRANCH FROM GITHUB
+>DELETE A BRANCH
 
-65. `git branch myBranch origin/myBranch` - restore myBranch
-66. `git branch` - list branches
+63. `git branch --delete myBranch` - will result in error
+64. `git branch -D myBranch` - delete myBranch
+65. `git branch` - list branches
+
+>RESTORE A BRANCH FROM GITHUB
+
+66. `git branch myBranch origin/myBranch` - restore myBranch
+67. `git branch` - list branches
 
 ## COMMAND DESCRIPTIONS
 

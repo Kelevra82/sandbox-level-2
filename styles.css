@@ -1,0 +1,93 @@
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.green {
+    color: green;
+}
+
+element.style
+
+.thumbs-up {
+    background-image: url("");
+}
+
+.gradient {
+    background-image: linear-gradient(gray, white, gray);
+}
+
+.gradient-basic {
+    background-image: linear-gradient(gray, white, gray);
+}
+
+.gradient-left {
+    background-image: linear-gradient(to left, gray, white, gray);
+}
+
+.gradient-right {
+    background-image: linear-gradient(to right, gray, white, gray);
+}
+
+.gradient-top {
+    background-image: linear-gradient(to top, gray, white, gray);
+}
+
+.gradient-bottom {
+    background-image: linear-gradient(to bottom, gray, white, gray);
+}
+
+.gradient-degree {
+    background-image: linear-gradient(90deg, gray, white, gray);
+}
+
+.height {
+    height: 200px;
+}
+
+.opacity25 {
+    opacity: 0.25;
+}
+
+.i-green, .b-green {
+    color: green;
+}
+
+i b {
+    color: green;
+}
+
+#red-italic {
+    color: red;
+    font-style: italic;
+}
+
+.blue-bold {
+    color: blue;
+    font-weight: bold;
+}
+
+article {
+    color: sandybrown !important;
+}
+
+article {
+    color: green !important;
+    color: green;
+    font-weight: bold;
+}
+
+.width100 {
+    width: 100%;
+}
+
+img {
+    display: none;
+}

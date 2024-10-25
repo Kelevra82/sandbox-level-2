@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="container">
+        <header></header>
+        <main  class="gradient">
+            <h1>CSS Notes</h1>
+
+            <pre>
+                display: block;
+                Puts elements on their own line.
+                The a tags are now block elements.
+                They have their own line.
+            </pre>
+            <a class="block">a tag 1</a>
+            <a class="block">a tag 2</a>
+            <a class="block">a tag 3</a>
+
+            <pre>
+                display: inline;
+                Makes elements in line.
+                The &lt;p&gt; tags are now inline.                
+            </pre>
+            <p class="inline">p tag1</p>
+            <p class="inline">p tag2</p>
+            <p class="inline">p tag3</p>
+
+            <pre>
+                display: none;
+                Makes the element invisible,
+                but it's still in the Elements panel.
+            </pre>
+            <img class="none" src="images/2d-shapes.jpg">
+
+            <pre>
+                Background image
+                background-image: url("thumbs-up.png");
+                Add the filename or URL for the image.
+            </pre>
+            <div class="thumbs-up width100 height"></div>
+
+            <pre>
+                Adding multiple background images
+                background-image: url("thumbs-up.pg");
+                background-image: linear-gradient(white, gray);
+                Add background images to nesting elements.
+                The elements nested deeply will appear in front.
+            </pre>
+            <div class="gradient-basic">
+                <div class="thumbs-up width100height"></div>
+            </div>
+
+            <div class="gradient-basic height">
+                <pre>
+                    Basic gradient
+                    background-image: linear-gradient(white, gray);
+                </pre>
+            </div>
+
+            <div class="gradient-colors height">
+                <pre>
+                    Multiple Colors gradient
+                    background-image: linear-gradient(white, gray, green);
+                    Add more colors by seperating them with a comma.
+                </pre>
+            </div>
+
+            <div class="gradient-direction height">
+                <pre>
+                    Gradient Directions
+                    background-image: linear-gradient(to bottom right, white, gray, green);
+                    to change the direction, add to the beginning:
+                    to right
+                    to bottom right
+                    to left
+                    to bottom left
+                </pre>
+            </div>
+
+            <div class="gradient-degree height">
+                <pre>
+                    Gradient Degrees
+                    background-image: linear-gradient(90deg, white, gray, green);
+                    To change the direction, add degrees to the beginning:
+                    90deg (right)
+                    135deg (bottom right)
+                    270deg (left)
+                    215deg (bottom left)
+                </pre>
+            </div>
+
+            <pre class="transparent-green gradient-basic">
+                RGBA
+                color: rgba(6, 68, 0, 0.259);
+                Sets the transparency of colors
+                Red Green Blue Alpha
+                0 alpha is invisible
+                1 alpha is fully visible
+            </pre>
+
+            <pre>
+                Opacity
+                opacity: 0.25;
+                Sets the transparency of the element
+                0 is invisible
+                1 is fully visible
+            </pre>
+            <div class="gradient-basic">
+                <img class="opacity25" src="thumbs-up.png">
+            </div>
+
+            <pre>
+                Grouping selector
+                i-green, b-green {
+                    color: green;
+                }
+                Seperate elements, classes, or IDs with commas.
+                The grouping selector applies the style to all of those elements.
+            </pre>
+            <i class="i-green">itlaic tag</i>
+            <b class="b-green">bold tag</b>
+            <i class="i-green">italic tag</i>
+            <b class="b-green">bold tag</b>
+
+            <pre>
+                Nesting selector
+                i b {
+                    color: green;
+                }
+                Select the nested element(s)
+                Example: &lt;b&gt; is nested in &lt;i&gt;
+            </pre>
+
+            <i>
+                italic
+                <b>Inside the &lt;i&gt; tag</b>
+                italic
+                <b>Inside the &lt;b&gt; tag</b>
+            </i>
+            <b>Not in the &lt;i&gt; tag</b>
+
+            <pre>
+                Specificity
+                Styling priority
+                1. inline
+                2. id
+                3. class
+                4. element
+
+                Styles are applied based on their specificity or priority.
+                Styles with lower priority get overwritten.
+                !important overwrites them all.
+                !important also goes by load order.
+                The !important that gets loaded last gets applied.
+            </pre>
+
+            <article style="color: black" id="red-italic" class="blue-bold">
+                article with inline style black, id red-italic and class blue-bold
+            </article>
+            <article id="red-italic" class="blue-bold">
+                article with class and id
+            </article>
+            <article class="blue-bold">article with class blue-bold</article>
+            <article class="blue-bold">article with class blue-bold</article>
+            <article>just article</article>
+
+            <pre>
+                Padding shorthand
+            </pre>
+
+            
+
+        </main>
+
+        <footer></footer>
+        
+    </body>
+</html>
