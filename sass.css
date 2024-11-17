@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Exo2";
-  src: url("fonts\exo2-Regular.otf");
+  src: url("Exo2-Regular.otf");
 }
 p {
   color: red;
@@ -68,7 +68,7 @@ pre i {
 }
 
 .bg-image {
-  background-image: url("imagessoots.png");
+  background-image: url("soots.png");
 }
 
 .horizontalRepeat {

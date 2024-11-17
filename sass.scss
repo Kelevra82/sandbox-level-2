@@ -7,7 +7,7 @@ $myColor: purple;
 $darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
 $lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
 
-$soots: url("images\soots.png");
+$soots: url("soots.png");
 $horizontalRepeat: space no-repeat;
 $verticalRepeat: no-repeat repeat;
 $stretch: 25% 100%;
@@ -18,7 +18,7 @@ $secondaryFont: fantasy;
 
 @font-face {
     font-family: "Exo2";
-    src: url("fonts\Exo2-Regular.otf");
+    src: url("Exo2-Regular.otf");
 }
 // MIXINS
 @mixin redText {
@@ -149,40 +149,3 @@ pre {
 .gradient {
     background-image: $lightGradient;
 }
-
-
-// #mixin-example {
-    //     @include boxShadow;
-    //     @include textShadow;
-    // }
-    
-    // #mixin-button {
-        //     @include animation1;
-        
-        //     &:hover {
-            //         @include animation2;
-            //     }
-            // }
-
-// @mixin textShadow {
-//     text-shadow: 3px 3px darkgrey;
-// }
-
-// @mixin animation {
-//     transform: scale(1) rotate(0deg);
-//     transition: transform 1s;
-
-//     &:hover {
-//         transform: scale(0.5) rotate(360deg);
-//         transition: transform 2s;
-//     }
-// }
-
-// @mixin animation1 {
-//     transform: scale(1) rotate(0deg);
-//     transition: transform 1s;
-// }
-
-// @mixin animation2 {
-//     transform: scale(1.5) rotate(360deg);
-// }
