@@ -1,76 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Styles</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="container">
         <header></header>
-        <main  class="gradient">
-            <h1>CSS Notes</h1>
+        <main class="gradient-basic">
+            
+            <h1>CSS Notes</h1><br><br>
 
-            <pre>
-                display: block;
+            <h4>display: block;</h4>
+            <pre> 
                 Puts elements on their own line.
                 The a tags are now block elements.
                 They have their own line.
             </pre>
             <a class="block">a tag 1</a>
             <a class="block">a tag 2</a>
-            <a class="block">a tag 3</a>
+            <a class="block">a tag 3</a><hr>
 
-            <pre>
-                display: inline;
+            <h4>display: inline;</h4>
+            <pre> 
                 Makes elements in line.
                 The &lt;p&gt; tags are now inline.                
             </pre>
             <p class="inline">p tag1</p>
             <p class="inline">p tag2</p>
-            <p class="inline">p tag3</p>
+            <p class="inline">p tag3</p><hr>
 
-            <pre>
-                display: none;
-                Makes the element invisible,
+            <h4>display: none;</h4>
+            <pre> 
+                Makes the element invisible
                 but it's still in the Elements panel.
             </pre>
-            <img class="none" src="images/2d-shapes.jpg">
+            <img class="none" src="images/2d-shapes.jpg"><hr>
 
-            <pre>
-                Background image
-                background-image: url("thumbs-up.png");
+            <h4>Add background image</h4>
+            <pre> 
+                background-image: url("images/soots.png");
                 Add the filename or URL for the image.
             </pre>
-            <div class="thumbs-up width100 height"></div>
+            <div class="soots width100 height"></div><hr>
+            
+            <h4>Resize background image</h4>
+            <pre> 
+                background-size: 5%;
+                One value resizes the width and height proportionally
+                Two values resizes the width and height separately.
+            </pre>
+            <div class="size5 soots width100 height"></div><hr>
+            
+            
+            <h4>Repeating a background</h4>
 
-            <pre>
-                Adding multiple background images
-                background-image: url("thumbs-up.pg");
+            <pre>             
+            1.  background-repeat: repeat;
+                The background repeats to fill up all the space,
+                which may clip (or cut off) the image.
+            </pre>
+            <div class="repeat size5 soots width100 height"></div><br>
+
+            <pre>             
+            2.  background-repeat: no-repeat;
+                By default, the background repeats.
+            </pre>
+            <div class="no-repeat size5 soots width100 height"></div><br>
+            
+            <pre>             
+            3.  Repeating a background
+                background-repeat: space;
+                Repeats the background such that it doesn't get cut off
+            </pre>
+            <div class="space size5 soots width100 height"></div><br>
+            
+            <pre>             
+            4.  Repeating a background horizontally
+                background-repeat: space no-repeat;
+                background-repeat: repeat no-repeat;
+                The first value is the horizontal repeat (x)
+                The second value is the vertical repeat (y)
+                Values are seperated by a space
+            </pre>
+            <div class="bg-repeat-hrzn size5 soots width100 height"></div><br>
+            
+            <pre>             
+            5.  Repeating a background vertically
+                background-repeat: no-repeat repeat;
+                background-repeat: no-repeat space;
+                The first value is the horizontal repeat (x)
+                The second value is the vertical repeat (y)
+                Values are seperated by a space
+            </pre>
+            <div class="bg-repeat-vert size5 soots width100 height"></div><br><hr>
+            
+            
+            <h4>Background positions</h4>            
+            <pre> 
+            1.  background-position: center;
+                The choices are top, bottom, left, right, center
+            </pre>
+            <div class="bg-center no-repeat size5 soots width100 height"></div><br>
+            
+            <pre> 
+            2.  background-position: 10%;
+                One value specifies both x and y
+            </pre>
+            <div class="bg-1value no-repeat size5 soots width100 height"></div><br>
+            
+            <pre> 
+            3.  background-position: 20% 30%;
+                Two values position x and y individually
+            </pre>
+            <div class="bg-offcenter no-repeat size5 soots width100 height"></div><hr>
+            
+            <h4>Adding multiple background images</h4>
+            <pre> 
+                background-image: url("images/soots.png");
                 background-image: linear-gradient(white, gray);
                 Add background images to nesting elements.
                 The elements nested deeply will appear in front.
             </pre>
-            <div class="gradient-basic">
-                <div class="thumbs-up width100height"></div>
-            </div>
-
             <div class="gradient-basic height">
-                <pre>
-                    Basic gradient
-                    background-image: linear-gradient(white, gray);
-                </pre>
-            </div>
+                <div class="soots width100 height"></div>
+            </div><hr>
 
+            <h4>Basic gradient</h4>
+            <div class="gradient-basic height">
+                <pre> 
+                    background-image: linear-gradient(gray, white);
+                </pre>
+            </div><hr>
+
+            <h4>Multiple colors gradient</h4>
             <div class="gradient-colors height">
-                <pre>
-                    Multiple Colors gradient
+                <pre> 
                     background-image: linear-gradient(white, gray, green);
                     Add more colors by seperating them with a comma.
                 </pre>
-            </div>
+            </div><hr>
 
+            <h4>Gradient Directions</h4>
             <div class="gradient-direction height">
-                <pre>
-                    Gradient Directions
+                <pre> 
                     background-image: linear-gradient(to bottom right, white, gray, green);
                     to change the direction, add to the beginning:
                     to right
@@ -78,72 +153,99 @@
                     to left
                     to bottom left
                 </pre>
-            </div>
+            </div><hr>
 
+            <h4>Gradient Degrees</h4>
             <div class="gradient-degree height">
-                <pre>
-                    Gradient Degrees
+                <pre> 
                     background-image: linear-gradient(90deg, white, gray, green);
                     To change the direction, add degrees to the beginning:
                     90deg (right)
                     135deg (bottom right)
                     270deg (left)
-                    215deg (bottom left)
+                    225deg (bottom left)
                 </pre>
-            </div>
+            </div><hr>
+            
+            <h4>Gradient color stops</h4>
+            <div class="gradient-stops height">
+                <pre> 
+                    background-image: linear-gradient(90deg, gray, green 10% 90%, gray);
+                    Two values next to the middle color sets solid color positions
+                    Seperated by spaces
+                </pre>
+            </div><hr>            
 
-            <pre class="transparent-green gradient-basic">
-                RGBA
+            <h4>RGBA</h4>
+            <pre class="transparent-green gradient-basic"> 
                 color: rgba(6, 68, 0, 0.259);
                 Sets the transparency of colors
                 Red Green Blue Alpha
                 0 alpha is invisible
                 1 alpha is fully visible
-            </pre>
+            </pre><hr>
 
-            <pre>
-                Opacity
+            <h4>Opacity</h4>
+            <pre> 
                 opacity: 0.25;
                 Sets the transparency of the element
                 0 is invisible
                 1 is fully visible
             </pre>
             <div class="gradient-basic">
-                <img class="opacity25" src="thumbs-up.png">
-            </div>
+                <img class="opacity25 height" src="images/soots.png">
+            </div><hr>
 
-            <pre>
-                Grouping selector
-                i-green, b-green {
+            <h4>display: none vs opacity: 0</h4>
+            <pre>                
+                display: none 
+                    - makes the element invisible
+                    - removes the element from the the browser
+                    - the element is still in the element tree
+
+                opacity: 0
+                    - makes the element invisible
+                    - doesn't remove the element from the browser
+                    - the element still takes up space in the browser
+            </pre>
+            <div class="border border-5 m-1">
+                <div class="none">Hello World!</div>
+            </div>
+            <div class="border border-5 m-1">
+                <div class="opacity0">Hello World!</div>
+            </div><hr>
+                
+            <h4>Grouping selectors</h4>
+            <pre> 
+                .i-green, .b-green {
                     color: green;
                 }
                 Seperate elements, classes, or IDs with commas.
                 The grouping selector applies the style to all of those elements.
             </pre>
-            <i class="i-green">itlaic tag</i>
-            <b class="b-green">bold tag</b>
             <i class="i-green">italic tag</i>
             <b class="b-green">bold tag</b>
+            <i class="i-green">italic tag</i>
+            <b class="b-green">bold tag</b><hr>
 
-            <pre>
-                Nesting selector
+            <h4>Nesting selectors</h4>
+            <pre> 
                 i b {
                     color: green;
                 }
                 Select the nested element(s)
                 Example: &lt;b&gt; is nested in &lt;i&gt;
-            </pre>
-
+            </pre>            
             <i>
                 italic
                 <b>Inside the &lt;i&gt; tag</b>
                 italic
                 <b>Inside the &lt;b&gt; tag</b>
             </i>
-            <b>Not in the &lt;i&gt; tag</b>
+            <b>Not in the &lt;i&gt; tag</b><hr>
 
-            <pre>
-                Specificity
+            <h4>Specificity</h4>
+            <pre> 
                 Styling priority
                 1. inline
                 2. id
@@ -156,21 +258,101 @@
                 !important also goes by load order.
                 The !important that gets loaded last gets applied.
             </pre>
-
-            <article style="color: black" id="red-italic" class="blue-bold">
-                article with inline style black, id red-italic and class blue-bold
+            <article style="color: black" class="blue-bold">
+                article with inline style black and class blue-bold
             </article>
             <article id="red-italic" class="blue-bold">
                 article with class and id
             </article>
             <article class="blue-bold">article with class blue-bold</article>
             <article class="blue-bold">article with class blue-bold</article>
-            <article>just article</article>
+            <article>just article</article><hr>
 
-            <pre>
-                Padding shorthand
+            <h4>Padding shorthand property</h4>
+            <pre> 
+                padding: 5px 6px 7px 8px;
+                Padding gets applied in a clockwise direction when 4 values are specified.
+
+                padding: 10px 20px
+                Providing 2 values specifies
+                1. top and bottom
+                2. left and right
+
+                padding: 10px 20px 30px
+                Providing 3 values specifies
+                1. top
+                2. left and right
+                3. bottom
+            </pre><hr>
+
+            <h4>Margin shorthand property</h4>
+            <pre> 
+                margin: 5px 6px 7px 8px;
+                Margin gets applied in a clockwise direction when 4 values are specified.
+
+                margin: 10px 20px
+                Providing 2 values specifies
+                1. top and bottom
+                2. left and right
+
+                margin: 10px 20px 30px
+                Providing 3 values specifies
+                1. top
+                2. left and right
+                3. bottom
+            </pre><hr>
+
+            <h4>Box shadow</h4>
+            <pre> 
+                box-shadow: 2px 2px black;
+                1. x offset
+                2. y offset
+                3. color
             </pre>
+            <span class="box-shadow bg-info m-5">Hello World!</span><hr>
+            
+            <h4>Text shadow</h4>
+            <pre> 
+                text-shadow: 1px 1px orange;
+                1. x offset
+                2. y offset
+                3. color
+            </pre>
+            <span class="text-shadow m-5">Hello World!</span><hr>
 
+            <h4>Transformations</h4>
+            <pre> 
+            1.  transform: rotate(20deg);
+            </pre>
+            <button class="rotate btn btn-primary m-5">Click</button><br>
+            
+            <pre> 
+            2.  transform: translate(10px, -10px);
+            </pre>
+            <button class="translate btn btn-primary m-5">Click</button><br>
+            
+            <pre> 
+            3.  transform: scale(2);
+                Decimal values make the element smaller
+                Integers increase the size of the element
+            </pre>
+            <button class="scale btn btn-primary m-5">Click</button><br>
+            
+            <pre> 
+            4.  transform: scale(2) rotate(20deg);
+                Apply multiple transformations seperated by spaces
+            </pre>
+            <button class="scale-rotate btn btn-primary m-5">Click</button><hr>
+            
+            <h4>Transitions (animations)</h4>
+            <pre> 
+                transition: transform 2s;
+                The first value is the style to animate
+                The second value is the duration of the animation
+
+                Set an animation for the original state to prevent snap-back
+            </pre>
+            <button class="animation btn btn-primary m-5">Click</button><hr>
             
 
         </main>

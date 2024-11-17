@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="javascript.css">
+        <script src="javascript.js"></script>
+    </head>
+
+    <body>
+        
+        <header></header>
+        
+        <main>
+            <pre> 
+                Activator function
+                -------------------------------
+                <code>
+                function greeting() {
+                    display("Hello World!");
+                }
+                </code>
+                A function that doesn't have parameters.
+                It's only purpose is to call a function with parameters.
+
+                <button onclick="greeting()">Activate me</button>
+            </pre><hr>
+
+            <pre> 
+                Callback function
+                -------------------------------
+                <code>
+                function myFunction(callbackFunction) {
+                    callbackFunction();
+                }
+
+                function activator() {
+                    myFunction(greeting);
+                }
+
+                activator();
+                </code>
+                A function that is passed as a parameter.
+                A function can be passed to another function.
+                The function can run that function.
+                <button onclick="activator()">Activate me!</button>
+            </pre><hr>
+
+            <pre> 
+                setTimeout
+                -------------------------------
+                <code>
+                function delayedGreeting() {
+                    setTimeout(greeting, 5000);
+                }
+                </code>
+                A function that calls a function after a specified time.
+                It accepts a function and a delay time in milliseconds.
+
+                <button onclick="delayedGreeting()">Delayed activation</button>
+            </pre><hr>
+
+            <pre> 
+                Asynchronous
+                -------------------------------
+                <code>
+                function asynchronous() {
+                    setTimeout(greeting, 5000);
+                    display("Waiting for the greeting to be displayed...");
+                }
+                </code>
+                
+                Able to run other code while waiting for some code to respond.
+                Like multitasking.
+                Other code runs immediately after <code>setTimeout</code>
+                The <code>greeting</code> function runs after other code.
+                <button onclick="asynchronous()">Delayed greeting</button>
+            </pre><hr>
+
+            <pre> 
+                Server simulation
+                -------------------------------
+                <code>
+                function submitForm(event) {
+                    event.preventDefault();
+                    const inputs = event.target;
+                    const emailInput = inputs[0];
+                    const email = emailInput.value;
+                    display("Form submitted with email: " + email + "...");
+                    setTimeout(serverResponse, 5000);
+                }
+                
+                function serverResponse() {
+                    display("Form was submitted successfully!");
+                }
+                </code>
+                A server takes time to respond.
+                Use asynchronous code to simulate it.
+
+            <form onsubmit="submitForm(event)">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <input type="submit" value="Submit">
+            </form>        
+            </pre><hr>
+
+            <pre> 
+                JSON stringify
+                -------------------------------
+                <code>
+                function displayObject() {
+                    const myCar = {
+                        color: "red",
+                        year: 2022,
+                    };
+                
+                    const result = JSON.stringify(myCar);
+                    display(result);
+                }
+                </code>
+                Generates a string from an object.
+                Need to store result.
+                JSON - JavaScript Object Notation
+                Servers communicate with stringified objects.
+                The syntax we use to represent objects.
+                - Curly braces represent an object
+                - Properties are separated by commas
+                - Properties are in quotes
+                - Values are set with a colon
+                
+                <button onclick="displayObject()">Display object</button>
+            </pre><hr>
+
+            <pre> 
+                JavaScript class
+                -------------------------------
+                <code>
+                class MyCar {
+                    color = "red";
+                    year = 2022;
+                }
+                </code>
+                A JavaScript class is like a template.
+                It predefines an object without creating it.
+                Usually created towards the top of a Javascript file.
+
+                Syntax:
+                1. Keyword <code>class</code>
+                2. Class name, usually in PascalCase
+                    - PascalCase is like camelCase, but starts with a capital letter
+                3. Curly braces
+                4. Assign properties their values
+                    - Use equal signs and semi-colons
+            </pre><hr>
+
+            <pre> 
+                JavaScript class vs object
+                -------------------------------
+                <code>
+                class MyCar {
+                    color = "red";
+                    year = 2022;
+                }
+                
+                const myCar = {
+                    color: "red",
+                    year: 2022,
+                }
+                </code>
+                Directly displaying a class shows its code.
+                In developer tools, a class has a name and length.
+                The JavaScript class is different from a JavaScript object.
+                The syntax of a class is different than an object.
+
+                <button onclick="classVsObject()">class vs object</button>
+            </pre><hr>
+
+            <pre> 
+                Create a new object from a class
+                -------------------------------
+                <code>
+                const myCar = new MyCar();
+                const myCar2 = new MyCar();
+                const myCar3 = new MyCar();
+
+                myCar2.color = "white";
+                myCar3.year = 2025;
+                </code>
+                The objects start with the properties and values defined by the class.
+                The objects are independent of each other.
+                - The values of their properties can be changed indvidually.
+                Syntax:
+                1. Keyword <code>new</code>
+                2. Name of the class with parentheses after it.
+                3. Store the value
+                    - The value is an object created from the class.
+
+                <button onclick="newObject()">Create object from class</button>
+            </pre><hr>
+
+            <pre> 
+                Handler naming convention
+                -------------------------
+                <code>
+                onsubmit="handleSubmit(event)"
+                onclick="handleClick(event)"
+                </code>
+                A handler function usually starts with <code>handle</code>
+            </pre><hr>
+
+            <pre> 
+                Server Simulation with Promise
+                -----------------------------
+                <form onsubmit="handleSubmit(event)">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <input type="submit">
+                </form>
+            </pre><hr>
+
+            <pre> 
+                JSON parse
+                ---------------
+                <code>
+                const response = JSON.parse(resolveValue);
+                </code>
+                Parse: Analyze the data and convert it to a usable format.
+                <code>JSON.parse</code> converts a string into an object.
+            </pre><hr>
+
+            <pre> 
+                Promise - Best practices
+                -----------------------
+                <code>
+                    consst promise = 
+                    function makeRequestURL() {
+                        const promise = new Promise(getServerResponse);
+                        return promise;                        
+                    }
+                </code>                
+            </pre><hr>
+        </main>
+        
+        <footer></footer>
+    
+    </body>
+</html>

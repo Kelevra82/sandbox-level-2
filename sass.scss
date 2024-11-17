@@ -1,0 +1,188 @@
+// CUSTOM COLORS
+$darkGreen: rgba(0, 95, 0, 1);
+$lightBlue: rgba(70, 70, 255, 1);
+$darkRed: rgb(233, 46, 40);
+$myColor: purple;
+
+$darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
+$lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
+
+$soots: url("images\soots.png");
+$horizontalRepeat: space no-repeat;
+$verticalRepeat: no-repeat repeat;
+$stretch: 25% 100%;
+
+// CUSTOM FONTS
+$primaryFont: "Exo2";
+$secondaryFont: fantasy;
+
+@font-face {
+    font-family: "Exo2";
+    src: url("fonts\Exo2-Regular.otf");
+}
+// MIXINS
+@mixin redText {
+    color: red;
+}
+
+@mixin boxShadow {
+    box-shadow: 5px 5px grey;
+}
+
+@mixin textShadow {
+    text-shadow: 2px 2px rgb(67, 67, 67);
+}
+
+@mixin animation1 {
+    transform: scale(1) rotate(0deg);
+    transition: transform 1s;  
+}
+
+@mixin animation2 {
+    transform: scale(2) rotate(15deg);
+    transition: transform 2s;
+}
+
+@mixin animation {
+    transform: scale(1) rotate(0deg);
+    transition: transform 1s; 
+    
+    &:hover {
+        transform: scale(0.5) rotate(-10deg);
+        transition: transform 2s;
+    }
+}
+
+p {
+    @include redText;
+}
+
+#mixin-example {
+    @include boxShadow;
+    @include textShadow;
+}
+
+#mixin-button {
+    @include animation1;
+
+    &:hover {
+        @include animation2;
+    }
+}
+
+#animated-button {
+    @include animation;
+}
+
+#subtitle {
+    width: fit-content;
+    @include animation;
+}
+
+
+
+main {
+    font-family: $primaryFont;
+}
+
+footer {
+    font-family: $secondaryFont;
+}
+
+h1 {
+    color: $darkGreen;
+    width: fit-content;
+    
+    &:hover {
+        color: $darkRed;
+    }
+}
+
+p b {
+    color: $lightBlue;
+}
+
+pre {
+    code {
+        color: $darkRed;
+    }
+}
+
+pre {
+    i {
+        color: $myColor;
+    }
+}
+
+.bg-image {
+    background-image: $soots;
+}
+
+.horizontalRepeat {
+    background-repeat: $horizontalRepeat;
+}
+
+.verticalRepeat {
+    background-repeat: $verticalRepeat;
+}
+
+.width {
+    width: 100%;
+}
+
+.height {
+    height: 200px;
+}
+
+.size7 {
+    background-size: 7%;
+}
+
+.size50 {
+    background-size: 50%;
+}
+
+.stretch {
+    background-size: $stretch;
+}
+
+.gradient {
+    background-image: $lightGradient;
+}
+
+
+// #mixin-example {
+    //     @include boxShadow;
+    //     @include textShadow;
+    // }
+    
+    // #mixin-button {
+        //     @include animation1;
+        
+        //     &:hover {
+            //         @include animation2;
+            //     }
+            // }
+
+// @mixin textShadow {
+//     text-shadow: 3px 3px darkgrey;
+// }
+
+// @mixin animation {
+//     transform: scale(1) rotate(0deg);
+//     transition: transform 1s;
+
+//     &:hover {
+//         transform: scale(0.5) rotate(360deg);
+//         transition: transform 2s;
+//     }
+// }
+
+// @mixin animation1 {
+//     transform: scale(1) rotate(0deg);
+//     transition: transform 1s;
+// }
+
+// @mixin animation2 {
+//     transform: scale(1.5) rotate(360deg);
+// }

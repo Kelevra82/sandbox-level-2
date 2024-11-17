@@ -1,3 +1,25 @@
+html {
+    background-color: rgb(3, 56, 63);
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.658);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+a, p, i, article  {
+    padding: 5px;
+}
+
+hr {
+    border: 3px solid black;
+}
+
+h1 {
+    text-align: center;
+}
+
 .inline {
     display: inline;
 }
@@ -10,42 +32,72 @@
     display: none;
 }
 
-.green {
-    color: green;
+.transparent-green {
+    color: rgba(6, 68, 0, 0.259);
 }
 
-element.style
-
-.thumbs-up {
-    background-image: url("");
+.soots {
+    background-image: url("images/soots.png");
 }
 
-.gradient {
-    background-image: linear-gradient(gray, white, gray);
+.size5 {
+    background-size: 5%;
+}
+
+.repeat {
+    background-repeat: repeat;
+}
+
+.no-repeat {
+    background-repeat: no-repeat;
+}
+
+.space {
+    background-repeat: space;
+}
+
+.bg-repeat-hrzn {
+    background-repeat: space no-repeat;
+}
+
+.bg-repeat-vert {
+    background-repeat: no-repeat repeat;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.bg-1value {
+    background-position: 10%;
+}
+
+.bg-offcenter {
+    background-position: 20% 30%;
 }
 
 .gradient-basic {
-    background-image: linear-gradient(gray, white, gray);
+    background-image: linear-gradient(white, gray);
 }
 
-.gradient-left {
-    background-image: linear-gradient(to left, gray, white, gray);
+.gradient-colors {
+    background-image: linear-gradient(white, gray, green);
 }
 
-.gradient-right {
-    background-image: linear-gradient(to right, gray, white, gray);
-}
-
-.gradient-top {
-    background-image: linear-gradient(to top, gray, white, gray);
-}
-
-.gradient-bottom {
-    background-image: linear-gradient(to bottom, gray, white, gray);
+.gradient-direction {
+    background-image: linear-gradient(to bottom right, green, white, gray);
 }
 
 .gradient-degree {
-    background-image: linear-gradient(90deg, gray, white, gray);
+    background-image: linear-gradient(90deg, green, white, gray);
+}
+
+.gradient-stops {
+    background-image: linear-gradient(90deg, gray, green 10% 90%, gray);
+}
+
+.width {
+    width: 100%;
 }
 
 .height {
@@ -56,7 +108,12 @@ element.style
     opacity: 0.25;
 }
 
-.i-green, .b-green {
+.opacity0 {
+    opacity: 0;
+}
+
+.i-green,
+.b-green {
     color: green;
 }
 
@@ -79,15 +136,69 @@ article {
 }
 
 article {
-    color: green !important;
+    /* color: green !important; */
     color: green;
     font-weight: bold;
 }
 
-.width100 {
-    width: 100%;
+.border-dashed {
+    border-style: dashed !important;
 }
 
-img {
-    display: none;
+.border-dotted {
+    border-style: dotted !important;
+}
+
+.border-double {
+    border-style: double !important;
+}
+
+.border-groove {
+    border-style: groove !important;
+}
+
+.border-ridge {
+    border-style: ridge !important;
+}
+
+.border-inset {
+    border-style: inset !important;
+}
+
+.border-outset {
+    border-style: outset !important;
+}
+
+.box-shadow {
+    box-shadow: 2px 2px black;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px orange;
+}
+
+.rotate:hover {
+    transform: rotate(20deg);
+}
+
+.translate:hover {
+    transform: translate(10px, -10px);
+}
+
+.scale:hover {
+    transform: scale(2);
+}
+
+.scale-rotate:hover {
+    transform: scale(2) rotate(20deg);
+}
+
+.animation:hover {
+    transform: scale(2) rotate(20deg);
+    transition: transform 2s;
+}
+
+.animation {
+    transform: scale(1) rotate(0deg);
+    transition: transform 1s;
 }

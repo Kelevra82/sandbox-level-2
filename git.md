@@ -1,5 +1,3 @@
-TOC
-
 # GIT COMMANDS
 
 ## INSTALL GIT BASH
@@ -39,7 +37,7 @@ TOC
 
 ## PULL FROM GITHUB
 
-```sh
+```
 git init
 git remote add origin https://github.com/YourName/YourRepo.git
 git pull origin main
@@ -142,7 +140,7 @@ git push
 
 >CREATE A BRANCH
 
-10.  `git branch myBranch` - create a new branch named myBranch
+10. `git branch myBranch` - create a new branch named myBranch
 11. `git switch myBranch` - switch to myBranch
 12. Add `<p>Hello World</p>` to index.html
 13. Save the changes CTRL + S

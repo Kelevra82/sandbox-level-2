@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sass</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="sass.css">
+    </head>
+
+    <body class="container">
+        <header></header>
+        <main>
+
+            <h1>Sass</h1>
+            <p>Syntactically <b>Awesome</b> Style Sheets</p>
+            <p>
+                <b>Sass</b> is a CSS preprocessor that is designed to help you write and maintain CSS. It is a superset of CSS, which means that you can use all the features of CSS along with some additional features. 
+            </p><hr>
+
+            <pre> 
+                SASS <code>nesting</code> syntax
+                ----------------------------
+                <code>
+                pre {
+                    code {
+                        color: red;
+                    }
+                }
+                </code>
+                A style can be nested in another style to select a nested element.
+                The code tag in the pre tag is styled.
+            </pre><hr>
+
+            <pre> 
+                SASS <i>variable</i> syntax
+                ----------------------------
+                <code>
+                $myColor: purple;
+                
+                pre {
+                    i {
+                        color: $myColor;
+                    }
+                }
+                </code>
+                
+                SASS variables start with $
+                Use colon to store a value
+                Use the variable name to access the value
+            </pre><hr>
+
+            <pre>                 
+                Background image variable
+                ----------------------------
+                <code>
+                $soots: url("images/soots.png");
+                
+                .bg-image {
+                    background-image: $soots;
+                }
+                </code>
+            </pre>
+            <div class="bg-image size50 width height"></div><hr>
+
+            <pre> 
+                Horizontal repeat variable
+                ----------------------------
+                <code>
+                $horizontalRepeat: space no-repeat;
+                
+                .horizontalRepeat {
+                    background-repeat: $horizontalRepeat;
+                }
+                </code>
+            </pre>
+            <div class="horizontalRepeat bg-image size7 width height"></div><hr>
+            
+            <pre> 
+                Vertical repeat variable
+                ----------------------------
+                <code>
+                $verticalRepeat: no-repeat repeat;
+                
+                .verticalRepeat {
+                    background-repeat: $verticalRepeat;
+                }
+                </code>
+            </pre>
+            <div class="verticalRepeat bg-image size7 width height"></div><hr>
+            
+            <pre> 
+                Background size variable
+                ----------------------------
+                <code>
+                $stretch: 25% 100%;
+                
+                .stretch {
+                    background-size: $stretch;
+                }
+                </code>
+            </pre>
+            <div class="stretch bg-image size7 width height"></div><hr>
+
+            <div class="gradient width height">
+                <pre> 
+                Gradient variables
+                ----------------------------
+                <code>
+                $darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
+                $lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
+                
+                .gradient {
+                    background-image: $lightGradient;
+                }
+                </code>
+                </pre>
+            </div><hr>            
+            
+            <pre> 
+                RGBA color variables
+                ----------------------------
+                <code>
+                $darkGreen: rgba(0, 95, 0, 1);
+                $lightBlue: rgba(70, 70, 255, 1);
+                $darkRed: rgba(140, 0, 0, 1);
+                </code>
+
+                Declare the color variables all in one area, towards the top.
+                Use them throughout the SASS file.
+                Define/declare variables before using them.
+                Changing the value of the variable affects the whole file.
+                Single source of truth - changing 1 thing changes them all.
+            </pre><hr>
+            
+            <pre> 
+                Single line comments
+                ----------------------------
+                
+                // CUSTOM Colors
+                SASS supports single line comments like JavaScript
+            </pre><hr>
+
+            <pre> 
+                Adjust width to automatically fit content
+                ----------------------------
+                <code>
+                width: fit-content;
+                </code>
+                
+                Userful on block elements.
+                Block elements will still use a whole line.
+                But the hit box of the block element is reduced.
+                Compare it with <code>display:inline</code>, which lines up the elements.
+
+            </pre><hr>
+            
+            <pre> 
+                Parent syntax
+                ----------------------------
+                <code>
+                h1 {
+                    color: $darkGreen;
+                    width: fit-content;
+                
+                    &:hover {
+                        color: $darkRed;
+                    }
+                }
+                </code>
+                Groups styles together under the parent selector.
+                Use <code>&</code> to subsitute the parent selector.
+                Any style belonging to the parent will be passed to the child styles.
+            </pre><hr>
+
+            <pre> 
+                Font families
+                ----------------------------
+
+                There are 5 built-in font families.
+                <code>
+                font-family: sans-serif;
+                font-family: serif;
+                font-family: monospace;
+                font-family: cursive;
+                font-family: fantasy;
+                </code>
+            </pre><hr>
+
+            <pre> 
+                Font variables
+                ----------------------------
+                <code>
+                $primaryFont: sans-serif;
+                $secondaryFont: fantasy;
+                </code>
+
+                User variables to store fonts.
+                Single source of truth.                
+            </pre><hr>
+
+            <pre> 
+                Adding fonts
+                ----------------------------
+                <code>
+                @font-face {
+                font-family: "Exo2";
+                src: url("fonts/exo2-regular.otf");
+                }
+
+                $primaryFront: "Exo2";
+
+                main {
+                    font-family: $primaryFont;
+                }
+                </code>
+                
+                1. Download the font https://dafont.com
+                2. If the font is in a .zip, extract and put it in the root folder
+                3. Use <code>@font-face</code> to add the font.
+                4. Use <code>font-family</code> to name the font.
+                5. Use <code>src: url()</code> to link the font file.
+                6. Use the font name.
+            </pre><hr>
+
+            <pre>
+                SASS mixins - single line
+                ----------------------------
+                <code>
+                @mixin redText {
+                    color: red;
+                }
+
+                
+                p {
+                    @include redText;
+                }
+                </code>
+                Mixins are like variables
+                Single-line mixins store a property and a value
+                Type <code>@mixin</code> to declare/define a mixin variable
+                Type <code>@include</code> to use the mixin
+                Mixins can substitute for utility classes so elements can be described by their name
+            </pre>
+            <p>This is a paragraph</p><hr>
+
+            <pre>
+                Using multiple mixins
+                ----------------------------
+                <code>
+                @mixin boxShadow {
+                    box-shadow: 5px 5px grey;
+                }                
+                @mixin textShadow {
+                    text-shadow: 2px 2px rgb(67, 67, 67);
+                }
+                
+                #mixin-example {
+                    @include boxShadow;
+                    @include textShadow;
+                }
+                </code>
+                Use @include for each mixin
+            </pre>
+            <span class="bg-primary p-2" id="mixin-example">Hello World!</span><hr>
+
+            <pre>
+                SASS mixins - multi line
+                ----------------------------
+                <code>
+                @mixin animation1 {
+                    transform: scale(1) rotate(0deg);
+                    transition: transform 1s;  
+                }
+
+                #mixin-button {
+                    @include animation1;
+                }
+                </code>
+                A multi-line mixin stores multiple properties and values
+            </pre>
+            <button class="btn btn-success" id="mixin-button">Click!</button><hr>
+
+            <pre>
+                SASS mixin - all in one
+                ----------------------------
+                <code>
+                // @mixin animation1 {
+                //     transform: scale(1) rotate(0deg);
+                //     transition: transform 1s;  
+                // }
+                    
+                // @mixin animation2 {
+                //     transform: scale(2) rotate(15deg);
+                //     transition: transform 2s;
+                // }
+                
+                @mixin animation {
+                    transform: scale(1) rotate(0deg);
+                    transition: transform 1s; 
+                    
+                    &:hover {
+                        transform: scale(0.5) rotate(-10deg);
+                        transition: transform 2s;
+                    }
+                }
+
+                #animated-button {
+                    @include animation;
+                }
+                </code>
+                The all-in-one mixin includes animation1 and animation2
+                Parent sytax is used
+                This mixin can be used in any element to animate it
+            </pre>
+            <button class="btn btn-primary" id="animated-button">Hello!</button>
+            <h2 class="bg-warning" id="subtitle">Here's an h2</h2><hr>
+
+        </main>
+        <footer>Hello footer!</footer>
+    </body>
+</html>

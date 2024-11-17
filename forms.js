@@ -12,9 +12,14 @@ function scheduleCall(event) {
     debugger;
     event.preventDefault();
     const form = event.target;
-    const datetimeInput = form[0];
+    const nameInput = form[0];
     const phoneInput = form[1];
-    const datetime = datetimeInput.value;
+    const dateInput = form[2];
+    const timeInput = form[3];
+    const name = nameInput.value;
     const phone = phoneInput.value;
-    output(`Phone call scheduled for ${datetime} at ${phone}.<br>`);
+    const date = dateInput.value;
+    const time = timeInput.value;
+    const datetime = `${date} at ${time}`;
+    output(`Thank you ${name} for scheduling a reservation! Phone call scheduled for ${datetime} at ${phone}.<br>`);
 }

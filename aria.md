@@ -1,10 +1,11 @@
 # ARIA
 
-### Accessible Rich Internet Applications
+
+## Accessible Rich Internet Applications
 
 It's a way to make websites more accessible to people with disabilities.
 
-### ARIA attributes
+## ARIA attributes
 
 1. `aria-current`
    - Indicates that an item is currently selected.
@@ -22,7 +23,7 @@ It's a way to make websites more accessible to people with disabilities.
    - `"Close"` is describing a button that has a meaning, but no label.
    - Use on icons or images that have a meaning but no label.
 
-### Enable the accessibility tree in developer tools
+## Enable the accessibility tree in developer tools
 
 1. Open developer tools
 2. Elements tab
@@ -30,7 +31,7 @@ It's a way to make websites more accessible to people with disabilities.
 4. Enable full-page accessibility tree
 5. Refresh the page
 
-### Accessibility tree
+## Accessibility tree
 
 The accessibility tree:
 
@@ -38,13 +39,13 @@ The accessibility tree:
 - Only includes accessibility elements.
 - How assistive technologies interpret and describe a web page to a user.
 
-### Semantic elements
+## Semantic elements
 
-1. header
-2. main
-3. footer
-4. section
-5. headings
+1. `<header>`
+2. `<main>`
+3. `<footer>`
+4. `<section>`
+5. `<headings>`
 6. `<p>`
 7. `<label>`
 8. `<article>`
@@ -63,7 +64,7 @@ The accessibility tree:
     - Use this for the result of a calculation or showing feedback.
     - Example: The form has been successfully submitted.
 
-### Semantic attributes
+## Semantic attributes
 
 1. Attributes that begin with `aria`
    - aria-current
